@@ -32,3 +32,16 @@
     name: jenkins
     state: started
     enabled: True
+
+- name: install extera packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ package_list }}"
+
+- name: Create awscli symlink
+  file:
+    src: /bin/aws
+    dest: /usr/local/bin/aws
+    state: link
