@@ -20,7 +20,7 @@
 
 - name: Install openjdk-8-jdk
   apt:
-    name: openjdk-7-jdk
+    name: openjdk-8-jdk
     state: present
     allow_unauthenticated: yes
 
