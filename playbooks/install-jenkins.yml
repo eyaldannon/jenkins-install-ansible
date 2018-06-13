@@ -3,5 +3,6 @@
 - name: Install jenkins
   hosts: all
   become: true
+  gather_facts: no
   roles:
     - install_jenkins
