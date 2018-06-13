@@ -45,6 +45,6 @@
 
 - name: Create awscli symlink
   file:
-    src: /bin/aws
+    src: /usr/bin/aws 
     dest: /usr/local/bin/aws
     state: link
