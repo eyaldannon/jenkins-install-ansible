@@ -11,6 +11,9 @@
     filename: jenkins.list
   notify: Update repositories cache
 
+- name: install key
+  shell: "wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -"
+
 - apt_repository:
     repo: ppa:openjdk-r/ppa
   notify: Update repositories cache
